@@ -22,6 +22,19 @@ if(ans3=="b"){
     poäng += 1;
 }
 
+Console.WriteLine("\n");
+
+switch(poäng){
+    case 1: Console.WriteLine($"Antal poäng: {poäng}, Vad dåligt du är, du fick bara en poäng!!");
+    break;
+    case 2: Console.WriteLine($"Antal poäng: {poäng}, Bra jobbat!");
+    break;
+    case 3: Console.WriteLine($"Antal poäng: {poäng}, Fantastiskt bra jobbat! Du fick alla rätt!");
+    break;
+}
+
+Console.ReadLine();
+
 
 
 
