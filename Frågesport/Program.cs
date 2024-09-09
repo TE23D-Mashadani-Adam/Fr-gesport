@@ -48,6 +48,8 @@ if(ans3 == "b" || ans3 == "a" || ans3 == "c"){
 }
 }
 
+//Räkna in poängen
+
 Console.WriteLine("\n");
 
 switch(poäng){
