@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
 
+while(true){
+
 Console.WriteLine("Väkommen till frågesport, du kommer att få svara på tre frågor, försök svara rätt på så "+
 "många som du kan, lycka till!");
 
@@ -9,7 +11,8 @@ String ans1 = "";
 String ans2 = "";
 String ans3 = "";
 
-bool wrongFormat;
+string rättSvar = "Rätt svar!";
+string felSvar = "Fel svar!";
 
 
 //Frågor
@@ -19,8 +22,11 @@ Console.WriteLine("Vilken är den bästa fotbollspelaren i historien? a) Ronaldo
 ans1 = Console.ReadLine();
 if(ans1 == "b" || ans1 == "a" || ans1 == "c"){
     if(ans1=="a"){
-    poäng += 1;
-    }
+    poäng++;
+    Console.WriteLine(rättSvar+"\n");
+    }else{
+    Console.WriteLine(felSvar+"\n");
+}
     break;
 }
 }
@@ -31,7 +37,10 @@ Console.WriteLine("Vem vann VM 2022? a)Franktike b) Argentina c) Spanien");
 ans2 = Console.ReadLine();
 if(ans2 == "b" || ans2 == "a" || ans2 == "c"){
     if(ans2=="b"){
-    poäng += 1;
+    poäng++;
+    Console.WriteLine(rättSvar+"\n");
+}else{
+    Console.WriteLine(felSvar+"\n");
 }
     break;
 }
@@ -42,9 +51,12 @@ Console.WriteLine("Vad är antalet spelare i varje lag i en fotbollsmatch? a) 10
 ans3 = Console.ReadLine();
 if(ans3 == "b" || ans3 == "a" || ans3 == "c"){
     if(ans3=="b"){
-    poäng += 1;
-    break;
+    poäng++;
+    Console.WriteLine(rättSvar+"\n");
+}else{
+    Console.WriteLine(felSvar+"\n");
 }
+    break;
 }
 }
 
@@ -53,6 +65,8 @@ if(ans3 == "b" || ans3 == "a" || ans3 == "c"){
 Console.WriteLine("\n");
 
 switch(poäng){
+    case 0: Console.WriteLine($"Antal poäng: {poäng}, du kan inget om sport!");
+    break;
     case 1: Console.WriteLine($"Antal poäng: {poäng}, Vad dåligt du är, du fick bara en poäng!!");
     break;
     case 2: Console.WriteLine($"Antal poäng: {poäng}, Bra jobbat!");
@@ -61,7 +75,15 @@ switch(poäng){
     break;
 }
 
-Console.ReadLine();
+Console.WriteLine("a) köra om, valfri tangent) Avsluta");
+
+string playAgainAns = Console.ReadLine().ToLower();
+
+if(playAgainAns!="a"){
+    break;
+}
+
+}
 
 
 
