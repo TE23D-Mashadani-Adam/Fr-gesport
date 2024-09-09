@@ -19,7 +19,7 @@ string felSvar = "Fel svar!";
 
 while(true){
 Console.WriteLine("Vilken är den bästa fotbollspelaren i historien? a) Ronaldo b) Messi c) Bellingham");
-ans1 = Console.ReadLine();
+ans1 = Console.ReadLine().ToLower();
 if(ans1 == "b" || ans1 == "a" || ans1 == "c"){
     if(ans1=="a"){
     poäng++;
@@ -34,7 +34,7 @@ if(ans1 == "b" || ans1 == "a" || ans1 == "c"){
 
 while(true){
 Console.WriteLine("Vem vann VM 2022? a)Franktike b) Argentina c) Spanien");
-ans2 = Console.ReadLine();
+ans2 = Console.ReadLine().ToLower();
 if(ans2 == "b" || ans2 == "a" || ans2 == "c"){
     if(ans2=="b"){
     poäng++;
@@ -48,7 +48,7 @@ if(ans2 == "b" || ans2 == "a" || ans2 == "c"){
 
 while(true){
 Console.WriteLine("Vad är antalet spelare i varje lag i en fotbollsmatch? a) 10 b) 11 c) 12");
-ans3 = Console.ReadLine();
+ans3 = Console.ReadLine().ToLower();
 if(ans3 == "b" || ans3 == "a" || ans3 == "c"){
     if(ans3=="b"){
     poäng++;
@@ -75,6 +75,7 @@ switch(poäng){
     break;
 }
 
+Console.WriteLine("\n");
 Console.WriteLine("a) köra om, valfri tangent) Avsluta");
 
 string playAgainAns = Console.ReadLine().ToLower();
